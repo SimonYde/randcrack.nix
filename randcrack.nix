@@ -1,7 +1,7 @@
 {
   lib,
   python3,
-  fetchFromGitHub,
+  randcrack-src,
 }:
 
 python3.pkgs.buildPythonApplication rec {
@@ -9,12 +9,7 @@ python3.pkgs.buildPythonApplication rec {
   version = "0.2.0";
   pyproject = true;
 
-  src = fetchFromGitHub {
-    owner = "tna0y";
-    repo = "Python-random-module-cracker";
-    rev = version;
-    hash = "sha256-DR6jq0deEqKn5titjzr+HYsZqLGYJcI0gcih32wsNlw=";
-  };
+  src = randcrack-src;
 
   build-system = [
     python3.pkgs.setuptools
