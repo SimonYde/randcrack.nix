@@ -4,7 +4,7 @@
   randcrack-src,
 }:
 
-python3.pkgs.buildPythonApplication rec {
+python3.pkgs.buildPythonPackage rec {
   pname = "randcrack";
   version = "0.2.0";
   pyproject = true;
